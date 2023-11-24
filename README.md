@@ -1,9 +1,9 @@
-# A3DAO - Arbitrary Bot (USDC/EUR3)
-![image](https://github.com/CristianRicharte6/A3DAO-Arbitrary-Bot/assets/102038261/5f9ea018-a924-4e46-b703-0902183353bf)
+# A3DAO - Arbitrage Bot (USDC/EUR3)
+![image](https://github.com/CristianRicharte6/A3DAO-Arbitrage-Bot/assets/102038261/5f9ea018-a924-4e46-b703-0902183353bf)
 
 ## Description
 
-This Arbitrary bot checks every 10 seconds if there is enough depeg between USDC/EURO3. If so:
+This Arbitrage bot checks every 10 seconds if there is enough depeg between USDC/EURO3. If so:
 - Underdepeg: It will buy EURO3 by selling USDC.
 - Overdepeg: It will sell EURO3 by buying USDC.
 *Note:* You can choose the depeg threshold on the .env
@@ -18,8 +18,8 @@ This Arbitrary bot checks every 10 seconds if there is enough depeg between USDC
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/CristianRicharte6/A3DAO-Arbitrary-Bot.git
-   cd A3DAO-Arbitrary-Bot
+   git clone https://github.com/CristianRicharte6/A3DAO-Arbitrage-Bot.git
+   cd A3DAO-Arbitrage-Bot
 
    ```
 
@@ -29,7 +29,7 @@ This Arbitrary bot checks every 10 seconds if there is enough depeg between USDC
    npm install
    ```
 
-3. Run the Arbitrary Bot!
+3. Run the Arbitrage Bot!
 
    ```sh
    npm run dev
