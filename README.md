@@ -1,5 +1,5 @@
 # A3DAO - Arbitrage Bot (USDC/EUR3)
-![image](https://github.com/CristianRicharte6/A3DAO-Arbitrage-Bot/assets/102038261/5f9ea018-a924-4e46-b703-0902183353bf)
+![image](https://github.com/CristianRicharte6/A3DAO-Arbitrage-Bot/assets/102038261/30ee28d8-7bdc-4f28-bc17-1862d6e39ed4)
 
 ## Description
 
