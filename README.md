@@ -1,5 +1,5 @@
 # A3DAO - Arbitrary Bot (USDC/EUR3)
-![image](https://github.com/CristianRicharte6/A3DAO/assets/102038261/208bbfa1-9c1c-4b86-bc4e-fffe2e8e67ce)
+![image](https://github.com/CristianRicharte6/A3DAO-Arbitrary-Bot/assets/102038261/5f9ea018-a924-4e46-b703-0902183353bf)
 
 ## Description
 
