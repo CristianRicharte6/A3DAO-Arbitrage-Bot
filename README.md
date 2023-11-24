@@ -1,2 +1,7 @@
 # A3 DAO
-Arbitrage bot &amp; leveraged vault position bot
+
+Arbitrage bot.
+
+Every 10 seconds it will check if there is a higher or lower Depeg of
+
+

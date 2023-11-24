@@ -4,15 +4,17 @@
   "description": "Arbitrage bot &amp; leveraged vault position bot",
   "main": "\t",
   "scripts": {
-    "dev": "ts-node src/app.ts",
+    "dev": "ts-node app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Cristian Richarte Gil",
   "license": "MIT",
   "dependencies": {
     "@types/express": "^4.17.21",
+    "@uniswap/sdk": "^3.0.3",
     "@uniswap/v3-periphery": "^1.4.4",
     "@uniswap/v3-sdk": "^3.10.0",
+    "axios": "^1.6.2",
     "dotenv": "^16.3.1",
     "ethers": "^6.8.1",
     "jsbi": "^4.3.0"
