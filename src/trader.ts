@@ -34,7 +34,7 @@ export const monitorAndTrade = async () => {
     if (depeg > depegThreshold) {
       // Check if EURO3 has underPeg against USDC
       if (USD_EUR > USDC_EURO3) {
-        console.log("Buying EURO3 for USDC as EURO3 is under peg.");
+        console.log("\n🟡 Buying EURO3 for USDC as EURO3 is under peg.");
 
         // Approve Router to manage ERC20 Tokens
         await USDC.approve(UNISWAPV3_ROUTER_ADDRESS, amountToSwap);
@@ -59,7 +59,7 @@ export const monitorAndTrade = async () => {
         return;
       } else {
         // Check if EURO3 has overPeg against USDC
-        console.log("Selling EURO3 for USDC as EURO3 is over peg.");
+        console.log("\n🟡 Selling EURO3 for USDC as EURO3 is over peg.");
 
         // Approve Router to manage ERC20 Tokens
         await EURO3.approve(UNISWAPV3_ROUTER_ADDRESS, amountToSwap);
