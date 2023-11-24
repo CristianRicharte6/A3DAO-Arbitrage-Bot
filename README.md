@@ -1,17 +1,17 @@
-# A3DAO - Arbitrage Bot (USDC/EUR3)
+# A3DAO - Arbitrage Bot ([USDC](0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174) / [EUR3](0xA0e4c84693266a9d3BBef2f394B33712c76599Ab))
 ![image](https://github.com/CristianRicharte6/A3DAO-Arbitrage-Bot/assets/102038261/30ee28d8-7bdc-4f28-bc17-1862d6e39ed4)
 
 ## Description
 
-This Arbitrage bot checks every 10 seconds if there is enough depeg between USDC/EURO3. If so:
-- Underdepeg: It will buy EURO3 by selling USDC.
-- Overdepeg: It will sell EURO3 by buying USDC.
-*Note:* You can choose the depeg threshold on the .env
+This Arbitrage bot checks if there is enough depeg in the USDC/EUR3 [Polygon Uniswap V3 pool](https://polygonscan.com/address/0xe1f9709d32db8a79ae44f66299e1a93ca84debe3) every 10 seconds and executes the next actions:
+- Underdepeg: It will buy 100 EURO3 by selling USDC.
+- Overdepeg: It will sell 100 EURO3 by buying USDC.
+*Note:* You can modify the depeg threshold on the .env
 
 
 ## Prerequisites
 - Node.js and npm.
-    
+- Typescript.    
 
 ## Installation
 
@@ -19,6 +19,7 @@ This Arbitrage bot checks every 10 seconds if there is enough depeg between USDC
 
    ```sh
    git clone https://github.com/CristianRicharte6/A3DAO-Arbitrage-Bot.git
+
    cd A3DAO-Arbitrage-Bot
 
    ```
@@ -38,7 +39,7 @@ This Arbitrage bot checks every 10 seconds if there is enough depeg between USDC
 
 ## 🛠 Setting up Environments
 
-Follow the `.env.example` file. Take into account to update the necessary variables.
+Follow the `.env.example` file and make sure you update the necessary variables.
 
 
 
