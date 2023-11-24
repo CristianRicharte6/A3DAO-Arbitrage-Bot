@@ -18,8 +18,8 @@ This Arbitrary bot checks every 10 seconds if there is enough depeg between USDC
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/CristianRicharte6/A3DAO.git
-   cd A3DAO
+   git clone https://github.com/CristianRicharte6/A3DAO-Arbitrary-Bot.git
+   cd A3DAO-Arbitrary-Bot
 
    ```
 
