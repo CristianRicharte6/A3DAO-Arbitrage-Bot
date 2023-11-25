@@ -5,7 +5,7 @@ const app = express();
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${Number(PORT)}`);
-  console.log(`\n⚠ Depeg threshold is set to ${DEPEG_DIFERENCE}% ⚠\n`);
+  console.log(`\n⚠ Depeg threshold is set to ${DEPEG_DIFERENCE}% ⚠`);
   console.log(
     `\n💱 If depeg, It will Buy/Sell ${AMOUNT_TO_SWAP} USDC/EUR3 💱\n`
   );
