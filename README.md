@@ -4,8 +4,8 @@
 ## Description
 
 This Arbitrage bot checks if there is enough depeg in the USDC/EUR3 [Polygon Uniswap V3 pool](https://polygonscan.com/address/0xe1f9709d32db8a79ae44f66299e1a93ca84debe3) every 10 seconds and executes the next actions:
-- Underdepeg: It will buy 100 EURO3 by selling USDC.
-- Overdepeg: It will sell 100 EURO3 by buying USDC.
+- Underdepeg: It will buy EURO3 by selling USDC.
+- Overdepeg: It will sell EURO3 by buying USDC.
 *Note:* You can modify the depeg threshold on the .env
 
 

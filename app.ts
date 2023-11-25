@@ -5,7 +5,7 @@ const app = express();
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${Number(PORT)}`);
-  console.log(`\n⚠ Depeg Check is set to ${DEPEG_DIFERENCE}% ⚠\n`);
+  console.log(`\n⚠ Depeg threshold is set to ${DEPEG_DIFERENCE}% ⚠\n`);
 
   setInterval(async () => {
     await monitorAndTrade();

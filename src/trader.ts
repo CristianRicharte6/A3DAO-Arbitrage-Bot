@@ -14,11 +14,12 @@ import {
   EURO3_ADDRESS,
   UNISWAPV3_ROUTER_ADDRESS,
   DEPEG_DIFERENCE,
+  AMOUNT_TO_SWAP,
 } from "./config";
 
 export const monitorAndTrade = async () => {
   try {
-    const amountToSwap = 100; //Amount to buy every time there is under/overPeg
+    const AMOUNT_TO_SWAP = 100; //Amount to buy every time there is under/overPeg
     const depegThreshold = Number(DEPEG_DIFERENCE); // 0.5% below peg
 
     const USD_EUR = await getExchangeRateUSD_EUR();
@@ -37,7 +38,11 @@ export const monitorAndTrade = async () => {
         console.log("\n🟡 Buying EURO3 for USDC as EURO3 is under peg.");
 
         // Approve Router to manage ERC20 Tokens
-        await USDC.approve(UNISWAPV3_ROUTER_ADDRESS, amountToSwap);
+        await USDC.approve(UNISWAPV3_ROUTER_ADDRESS, AMOUNT_TO_SWAP).then(
+          (transaction) => {
+            console.log(transaction);
+          }
+        );
 
         // Swap USDC for EURO3
         await UniswapV3Router.exactInputSingle(
@@ -47,7 +52,7 @@ export const monitorAndTrade = async () => {
             fee: feeProtocol,
             recipient: Signer.address,
             deadline: Math.floor(Date.now() / 1000) + 60 * 10,
-            amountIn: parseEther(amountToSwap.toString()),
+            amountIn: parseEther(AMOUNT_TO_SWAP.toString()),
             amountOutMinimum: 0,
             sqrtPriceLimitX96: 0,
           },
@@ -62,7 +67,11 @@ export const monitorAndTrade = async () => {
         console.log("\n🟡 Selling EURO3 for USDC as EURO3 is over peg.");
 
         // Approve Router to manage ERC20 Tokens
-        await EURO3.approve(UNISWAPV3_ROUTER_ADDRESS, amountToSwap);
+        await EURO3.approve(UNISWAPV3_ROUTER_ADDRESS, AMOUNT_TO_SWAP).then(
+          (transaction) => {
+            console.log(transaction);
+          }
+        );
 
         // Swap EURO3 for USDC
         await UniswapV3Router.exactInputSingle(
@@ -72,7 +81,7 @@ export const monitorAndTrade = async () => {
             fee: feeProtocol,
             recipient: Signer.address,
             deadline: Math.floor(Date.now() / 1000) + 60 * 10,
-            amountIn: parseEther(amountToSwap.toString()),
+            amountIn: parseEther(AMOUNT_TO_SWAP.toString()),
             amountOutMinimum: 0,
             sqrtPriceLimitX96: 0,
           },

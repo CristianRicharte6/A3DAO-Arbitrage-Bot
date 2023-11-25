@@ -7,4 +7,3 @@ export function calculateAbsolutePercentageDifference(
   const percentageDifference = absoluteDifference / averageValue;
   return Math.abs(percentageDifference);
 }
-calculateAbsolutePercentageDifference(0.9567621706086147, 0.9040951646193983);

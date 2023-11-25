@@ -6,6 +6,7 @@ require("dotenv").config();
 
 export const PORT = process.env.PORT! || 8080;
 export const DEPEG_DIFERENCE = process.env.DEPEG_DIFERENCE!;
+export const AMOUNT_TO_SWAP = process.env.AMOUNT_TO_SWAP!;
 
 // End points & Api Keys
 export const RPC_NODE = process.env.RPC_NODE!;

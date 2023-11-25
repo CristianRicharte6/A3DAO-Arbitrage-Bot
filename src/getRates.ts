@@ -16,21 +16,21 @@ async function getExchangeRateV3Pool(
   const shift = JSBI.leftShift(JSBI.BigInt(1), JSBI.BigInt(192));
   const quoteAmount = FullMath.mulDivRoundingUp(ratioX192, baseAmount, shift);
   const quoteAmountString = quoteAmount.toString();
-  const formatedPrice = Number(quoteAmountString) / 10 ** quoteTokenDecimals;
+  const formattedPrice = Number(quoteAmountString) / 10 ** quoteTokenDecimals;
 
-  return formatedPrice;
+  return formattedPrice;
 }
 
-// It will return the exchange rate from 1 USD to EUR
+// Get the exchange rate from USD to EUR
 export async function getExchangeRateUSD_EUR() {
   const response = await axios.get(
     `http://api.exchangeratesapi.io/v1/latest?access_key=${EXCHANGERATE_APIKEY}&symbols=USD`
   );
-  const RateUSD_EUR = 1 / response.data.rates.USD;
-  return RateUSD_EUR;
+  const rateUSD_EUR = 1 / response.data.rates.USD;
+  return rateUSD_EUR;
 }
 
-// It will return the exchange rate from 1 USDC to EURO3
+// Get the exchange rate from USDC to EURO3
 export async function getExchangeRateUSDC_EURO3() {
   const slot0 = await USDC_EURO3_PoolV3.slot0();
   const USDCDecimals = await USDC.decimals();
@@ -38,7 +38,7 @@ export async function getExchangeRateUSDC_EURO3() {
 
   const exchangeRate = await getExchangeRateV3Pool(
     1,
-    Number(slot0[1]), //Tick is the position 1 on the slot0 response
+    Number(slot0[1]), // Tick is the position 1 on the slot0 response
     Number(USDCDecimals),
     Number(EURO3Decimals)
   );
@@ -46,6 +46,7 @@ export async function getExchangeRateUSDC_EURO3() {
   return exchangeRate;
 }
 
+// Get the protocol fee
 export async function getFeeProtocol() {
   const slot0 = await USDC_EURO3_PoolV3.slot0();
   const fee = slot0[5];
