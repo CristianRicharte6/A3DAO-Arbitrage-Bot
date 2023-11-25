@@ -1,5 +1,6 @@
 # A3DAO - Arbitrage Bot ([USDC](https://polygonscan.com/address/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174) / [EUR3](https://polygonscan.com/address/0xA0e4c84693266a9d3BBef2f394B33712c76599Ab))
-![image](https://github.com/CristianRicharte6/A3DAO-Arbitrage-Bot/assets/102038261/30ee28d8-7bdc-4f28-bc17-1862d6e39ed4)
+<img width="950" alt="image" src="https://github.com/CristianRicharte6/A3DAO-Arbitrage-Bot/assets/102038261/333e72c9-9651-4e9f-b98a-85b9bc625860">
+
 
 ## Description
 
